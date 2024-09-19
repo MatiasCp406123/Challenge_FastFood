@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Componente Cocina</h2>
+
+    <p>Pedidos para Cocinar</p>
+    <ul>
+        @for(order of orderService.orders;track order){
+         <li>
+             {{order.number}}-{{order.name}}-{{order.description}}
+             <button (click)="coockOrder(order)">Cocinar</button>
+         </li>
+        }
+       </ul>
+       <p>Pedidos en Coccion</p>
+       <ul>
+           @for(order of orderService.orderCoocked;track order){
+            <li>
+                {{order.number}}-{{order.name}}-{{order.description}}
+                <button (click)="coockFinal(order)">PedidoTerminado</button>
+            </li>
+           }
+          </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <p>Pedidos listos para Entregar</p>
+    <ul>
+        @for(order of orderService.entrega;track order){
+         <li>
+             {{order.number}}-{{order.name}}-{{order.description}}
+             <button (click)="entregaFinal(order)">Entregar</button>
+         </li>
+        }
+       </ul>
+</div>

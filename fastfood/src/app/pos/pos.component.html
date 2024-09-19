@@ -1,0 +1,14 @@
+<form  #form="ngForm" (ngSubmit)="save(form)">
+    <h1>Component Point of Shell</h1>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="name"  name="name" required
+      #name="ngModel" [(ngModel)]="order.name">
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Pedido</label>
+      <input type="text" class="form-control" id="description" name="description" 
+      #description="ngModel" [(ngModel)]="order.description">
+    </div>
+    <button type="submit" class="btn btn-primary">Ordenar</button>
+  </form>
